@@ -8,6 +8,7 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .hero-img {
@@ -28,9 +29,11 @@ body {
 .nav {
     position: absolute;
     display: flex;
-    width: 990px;
-    top: 5%;
-    left: 40%;
+    width: 500vw;
+    top: 8px;
+    margin-left: 600px;
+    /* top: 5%;
+    left: 40%; */
     transform: translate(-50%,-50%);
     justify-content: space-between;
     align-items: center;
@@ -39,6 +42,7 @@ body {
 .nav-flex {
     display: flex;
     gap: 10px;
+    margin-top: 109px;
 }
 
 .btn1 {
@@ -61,7 +65,7 @@ body {
 
 .logo {
     color: red;
-    height: 140px;
+    /* height: 140px; */
     width: 140px;
     margin-top: 120px;
     align-items: flex-start;
@@ -199,3 +203,616 @@ section{
     margin: 20px;
 }
 
+/* large screen */
+@media(min-width: 990px) {
+    .hero {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .hero-img {
+        height: 100vh;
+        transform: scale(1);
+    }
+    
+    .tint {
+        background-color: rgba(0, 0, 0, 0.585);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .nav {
+        position: absolute;
+        display: flex;
+        width: 990px;
+        top: 8px;
+        margin-left: 600px;
+        /* top: 5%;
+        left: 40%; */
+        transform: translate(-50%,-50%);
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-flex {
+        display: flex;
+        gap: 10px;
+        margin-top: 109px;
+    }
+    
+    .btn1 {
+        background-color: transparent;
+        width: 80px;
+        padding: 10px 0;
+        color: white;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+    }
+    
+    .btn {
+        background-color: red;
+        width: 80px;
+        padding: 10px 0;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .logo {
+        color: red;
+        /* height: 140px; */
+        width: 140px;
+        margin-top: 120px;
+        align-items: flex-start;
+    }
+    
+    .content {
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .title{
+        font-size: 60px;
+    }
+    
+    .sub-title {
+        font-size: 26px;
+    }
+    
+    .desc {
+        font-size: 18px;
+    }
+    
+    .content-flex {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+    }
+    
+    .content-input {
+        width: 320px;
+        padding: 14px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.474);
+        border: 1px solid lightgray;
+        border-radius: 2px;
+    }
+    
+    .content-btn {
+        width: 250px;
+        padding: 12px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: red;
+        border: 1px solid lightgray;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+    }
+    
+    .container {
+        display: flex;
+        color: white;
+        margin: 100px auto;
+        width: 990px;
+        gap: 80px;
+    }
+    
+    .left{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .right {
+        width: 50%;
+        text-align: center;
+    }
+    
+    .tv {
+        position: relative;
+        width: 100%;
+        ;
+    }
+    
+    .video {
+        margin-left: 60px;
+        width: 80%;
+        height: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+    
+    .real-tv {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+    
+    .heading {
+        font-size: 48px;
+    }
+    
+    .heading-desc {
+        font-size: 24px;
+    }
+    
+    section{
+        border-bottom: 8px solid #eeeeee2a;
+    }
+    
+    .faq-heading {
+        color: white;
+        margin: 20px 100px;
+    }
+    
+    .details {
+        color: white;
+        border: 1px solid grey;
+        background-color: rgba(128, 128, 128, 0.294);
+        margin: 10px 100px;
+        box-sizing: border-box;
+        font-size: 23px;
+        width: 80%;
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .faq-content {
+        margin: 30px
+    }
+    
+    .faq {
+        margin: 20px;
+    }
+}
+
+/* medium screen */
+@media (min-width: 586px) and (max-width: 990px) {
+    .hero {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .hero-img {
+        height: 100vh;
+        transform: scale(1);
+    }
+    
+    .tint {
+        background-color: rgba(0, 0, 0, 0.585);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .nav {
+        position: absolute;
+        display: flex;
+        width: 80vw;
+        top: 8px;
+        margin-left: 50vw;
+        /* top: 5%;
+        left: 40%; */
+        transform: translate(-50%,-50%);
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-flex {
+        display: flex;
+        gap: 10px;
+        margin-top: 109px;
+    }
+    
+    .btn1 {
+        background-color: transparent;
+        width: 80px;
+        padding: 10px 0;
+        color: white;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+    }
+    
+    .btn {
+        background-color: red;
+        width: 80px;
+        padding: 10px 0;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .logo {
+        color: red;
+        /* height: 140px; */
+        width: 140px;
+        margin-top: 120px;
+        align-items: flex-start;
+    }
+    
+    .content {
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .title{
+        font-size: 60px;
+    }
+    
+    .sub-title {
+        font-size: 26px;
+    }
+    
+    .desc {
+        font-size: 18px;
+    }
+    
+    .content-flex {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+    }
+    
+    .content-input {
+        width: 320px;
+        padding: 14px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.474);
+        border: 1px solid lightgray;
+        border-radius: 2px;
+    }
+    
+    .content-btn {
+        width: 250px;
+        padding: 12px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: red;
+        border: 1px solid lightgray;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin: 100px auto;
+        width: 990px;
+        gap: 80px;
+    }
+    
+    .left{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .right {
+        width: 50%;
+        text-align: center;
+    }
+    
+    .tv {
+        position: relative;
+        width: 100%;
+        ;
+    }
+    
+    .video {
+        margin-left: 60px;
+        width: 80%;
+        height: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+    
+    .real-tv {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        display: block;
+        margin-left: 30vw;
+        align-items: center;
+    }
+    
+    .heading {
+        font-size: 48px;
+    }
+    
+    .heading-desc {
+        font-size: 24px;
+    }
+    
+    section{
+        border-bottom: 8px solid #eeeeee2a;
+    }
+    
+    .faq-heading {
+        color: white;
+        margin: 20px 100px;
+    }
+    
+    .details {
+        color: white;
+        border: 1px solid grey;
+        background-color: rgba(128, 128, 128, 0.294);
+        margin: 10px 100px;
+        box-sizing: border-box;
+        font-size: 23px;
+        width: 80%;
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .faq-content {
+        margin: 30px
+    }
+    
+    .faq {
+        margin: 20px;
+    }
+
+}
+
+/* small screen */
+@media(max-width: 586px) {
+    .hero {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .hero-img {
+        height: 100vh;
+        transform: scale(1);
+    }
+    
+    .tint {
+        background-color: rgba(0, 0, 0, 0.585);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .nav {
+        position: absolute;
+        /* display: flex; */
+        width: 490px;
+        top: 8px;
+        margin-left: 280px;
+        /* top: 5%;
+        left: 40%; */
+        transform: translate(-50%,-50%);
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-flex {
+        display: flex;
+        gap: 10px;
+        margin-top: 109px;
+    }
+    
+    .btn1 {
+        background-color: transparent;
+        width: 80px;
+        padding: 10px 0;
+        color: white;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+    }
+    
+    .btn {
+        background-color: red;
+        width: 80px;
+        padding: 10px 0;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .logo {
+        color: red;
+        /* height: 140px; */
+        width: 140px;
+        margin-top: 120px;
+        align-items: flex-start;
+    }
+    
+    .content {
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .title{
+        font-size: 50px;
+    }
+    
+    .sub-title {
+        font-size: 26px;
+    }
+    
+    .desc {
+        font-size: 25px;
+    }
+    
+    .content-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+    }
+    
+    .content-input {
+        width: 320px;
+        padding: 14px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.474);
+        border: 1px solid lightgray;
+        border-radius: 2px;
+    }
+    
+    .content-btn {
+        width: 200px;
+        padding: 12px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: red;
+        border: 1px solid lightgray;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin: 50px auto;
+        width: 600px;
+        gap: 80px;
+        align-items: center;
+    }
+    
+    .left{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .right {
+        width: 50%;
+        text-align: center;
+    }
+    
+    .tv {
+        position: relative;
+        width: 100%;
+    }
+    
+    .video {
+        margin-left: 60px;
+        width: 80%;
+        height: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+    
+    .real-tv {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+    
+    .heading {
+        font-size: 48px;
+    }
+    
+    .heading-desc {
+        font-size: 24px;
+    }
+    
+    section{
+        border-bottom: 8px solid #eeeeee2a;
+    }
+    
+    .faq-heading {
+        color: white;
+        margin: 20px 100px;
+    }
+    
+    .details {
+        color: white;
+        border: 1px solid grey;
+        background-color: rgba(128, 128, 128, 0.294);
+        margin: 10px 100px;
+        box-sizing: border-box;
+        font-size: 23px;
+        width: 80%;
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .faq-content {
+        margin: 30px
+    }
+    
+    .faq {
+        margin: 20px 5px;
+        align-items: center;
+    }
+}

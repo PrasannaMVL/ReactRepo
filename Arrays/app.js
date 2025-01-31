@@ -367,32 +367,230 @@
 // console.log('More than four digits', filterArray(array, 'moreThanFourDigits'))
 // console.log('Pattern with Es', filterArray(array, 'patternWithEs'))
 
-function filterArr(array,condition) {
-    let result = []
-    const filters = {
-        strings: (item) => typeof item === 'string',
-        numbers: (item) => typeof item === 'number',
-        even: (item) => typeof item === 'number' && item % 2 === 0,
-        odd: (item) => typeof item === 'number' && item % 2 === 1,
-        stringWithZ: (item) => typeof item === 'string' &&  item.includes('z'),
-        moreThanFourLength: (item) => typeof item === 'string' && item.length > 4,
-        moreThanFourDigits: (item) => typeof item === 'number' && item.toString().length > 4,
-        patternWithEs: (item) => typeof item === 'string' && item.includes('es')
-    }
-    for(let item of array) {
-        if(filters[condition](item)) {
-            result.push(item)
+// function filterArr(array,condition) {
+//     let result = []
+//     const filters = {
+//         strings: (item) => typeof item === 'string',
+//         numbers: (item) => typeof item === 'number',
+//         even: (item) => typeof item === 'number' && item % 2 === 0,
+//         odd: (item) => typeof item === 'number' && item % 2 === 1,
+//         stringWithZ: (item) => typeof item === 'string' &&  item.includes('z'),
+//         moreThanFourLength: (item) => typeof item === 'string' && item.length > 4,
+//         moreThanFourDigits: (item) => typeof item === 'number' && item.toString().length > 4,
+//         patternWithEs: (item) => typeof item === 'string' && item.includes('es')
+//     }
+//     for(let item of array) {
+//         if(filters[condition](item)) {
+//             result.push(item)
+//         }
+//     }
+//     return result
+// }
+
+//let array = [9,'apple','banana',4,'zebra',3,6,7,'zomato',67546,123,'swiggy','Goa',4250,'tomatoes']
+// console.log('Numbers', filterArr(array, 'numbers'))
+// console.log('Strings', filterArr(array, 'strings'))
+// console.log('Even', filterArr(array, 'even'))
+// console.log('Odd', filterArr(array, 'odd'))
+// console.log('String with z', filterArr(array, 'stringWithZ'))
+// console.log('More than four length', filterArr(array, 'moreThanFourLength'))
+// console.log('More than four digits', filterArr(array, 'moreThanFourDigits'))
+// console.log('Pattern with Es', filterArr(array, 'patternWithEs'))
+
+// let sampleResult = sampleArray.filter(function filterArray(arr){
+// return arr % 2 === 0
+// })
+
+//console.log(sampleResult)
+
+//write own filter function
+
+//let sampleArray = [10,20,31,40,51,60,71,80,90,100]
+
+// function filterArray(sampleArray,condition){
+//     let result = []
+//     for(i=0;i<sampleArray.length;i++) {
+//         if(condition) {
+//              result.push(sampleArray[i])
+//         }
+//     }
+//     return result
+// }
+
+
+// function filterArray(array){
+//     let evenArray = []
+//     for(i=0;i<array.length;i++){
+//         if(array[i] % 2 === 0){
+//              evenArray.push(array[i])
+//         }
+//     }
+//    return evenArray
+// }
+// let resultArray = filterArray([10,20,31,40,51,60,71,80,90,100])
+// console.log(resultArray)
+//console.log(filterArray(evenCondition([10,20,31,40,51,60,71,80,90,100])))
+//console.log(filterArray([10,20,31,40,51,60,71,80,90,100],evenCondition))
+
+//generic function for filter array
+//condition should be passed and return value of the function should be trur or false based on condition
+//How can I iterate over array and check condition for each item
+
+// function evenCondition(array){
+//     let evenArray = []
+//     for(i=0;i<array.length;i++){
+//         if(array[i] % 2 === 0){
+//              evenArray.push(array[i])
+//         }
+//     }
+//    return evenArray
+// }
+// let resultArray = evenCondition([10,20,31,40,51,60,71,80,90,100])
+// console.log(resultArray)
+/*let array = [10,20,31,40,51,60,71,80,90,100]
+
+function condition(arr) {
+    return arr % 2 === 0
+}
+function genericFilter(array,condition){
+    let resultArray = []
+    for(i=0;i<array.length;i++){
+        if(condition(array[i])){
+            resultArray.push(array[i])
         }
     }
-    return result
+    return resultArray
+}
+console.log(genericFilter(array,condition)) */
+// console.log(genericFilter(array,arr => 
+//      arr % 2 === 0
+// ))
+
+
+/* sum the total amount of the persons */
+let resultArray = []
+let inputArray = [
+    {
+      "rep": "Prasanna",
+      "amount": 500,
+    },
+    {
+      "rep": "Jhon",
+      "amount": 300,
+    },
+    {
+      "rep": "Prasanna",
+      "amount": 600,
+    },
+    {
+      "rep": "Jack",
+      "amount": 800,
+    },
+    {
+      "rep": "Prasanna",
+      "amount": 300,
+    },
+    {
+      "rep": "Jack",
+      "amount": 100,
+    }
+  ]
+  
+  function t1(){
+  const resultVals ={}
+  for (let i = 0; i < inputArray.length; i++) {
+    const repName = inputArray[i].rep
+    if(resultVals[repName]==null || resultVals[repName]==undefined){
+        resultVals[repName]= {...inputArray[i]}
+    }else{
+        resultVals[repName].amount = inputArray[i].amount + resultVals[repName].amount
+    }
+  }
+  console.log("result val")
+  console.dir(resultVals)
+ 
+  console.log("end of result val")
+  }
+  t1();
+  console.dir(inputArray)
+
+for (let i = 0; i < inputArray.length; i++) { //0 //1 //2
+    console.log('=============')
+    if (resultArray.length === 0) {   // 0 //2
+        resultArray.push(inputArray[i]) //{'rep': 'Prasanna', 'amount': 500
+        console.log("Result", JSON.stringify(resultArray))
+        console.log("Current element ", JSON.stringify(inputArray[i]))
+        console.log('Result array inside if', resultArray.length, i)
+    }
+    else {
+        //check for the second object from input list with result list
+        //return object or return -1
+        let rep = findingRep(inputArray[i], resultArray)
+        if (rep === -1) {
+            resultArray.push(inputArray[i])
+        }
+        else {
+            rep.amount = rep.amount + inputArray[i].amount
+        }
+
+    }
+
+
+}
+console.log('Final result array', resultArray)
+
+function findingRep(input,resultArray){
+    for(let i=0; i<resultArray.length;i++) {
+        if(input.rep === resultArray[i].rep){
+            return resultArray[i]
+        }
+    }
+    return -1
 }
 
-let array = [9,'apple','banana',4,'zebra',3,6,7,'zomato',67546,123,'swiggy','Goa',4250,'tomatoes']
-console.log('Numbers', filterArr(array, 'numbers'))
-console.log('Strings', filterArr(array, 'strings'))
-console.log('Even', filterArr(array, 'even'))
-console.log('Odd', filterArr(array, 'odd'))
-console.log('String with z', filterArr(array, 'stringWithZ'))
-console.log('More than four length', filterArr(array, 'moreThanFourLength'))
-console.log('More than four digits', filterArr(array, 'moreThanFourDigits'))
-console.log('Pattern with Es', filterArr(array, 'patternWithEs'))
+
+
+// function genericCondition(sampleArray,condition) {
+//     let result
+//     for(i=0; i<sampleArray.length; i++){
+//         if(condition(sampleArray[i])){
+//             result = i
+//             break
+//         }
+//         else result = -1
+//     }
+//     return result
+// }
+
+// let sampleArray = [
+//     {
+//     name : 'John',
+//     age : 25
+// },
+// {
+//     name:'Smith',
+//     age: 30
+// },
+// {
+//     name:'James',
+//     age:10
+// }
+// ]
+
+// function condition(sampleArray) {
+//     if(sampleArray.age > 25)
+//         return true
+//     else return false
+// }
+
+// let finalResult = genericCondition(sampleArray,condition)
+// console.log(finalResult)
+
+
+
+const o1 = {
+    "rep": {first:"firstname",lastname:"lastname"},
+    "amount": 500
+}
+o1.rep =  {first:"anotherName",lastname:"anotherName"}
+

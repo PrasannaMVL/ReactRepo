@@ -1,0 +1,32 @@
+.image{
+    width: 300px;
+    border-radius: 5px;
+}
+
+.price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+    color: red;
+    font-size: medium;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+}
+
+.place {
+    font-size: large;
+    font-weight: bold;
+}
+
+.visit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 4px;
+    margin: 0px;
+    color: orangered
+}

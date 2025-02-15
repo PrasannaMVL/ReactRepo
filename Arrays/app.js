@@ -468,85 +468,85 @@ console.log(genericFilter(array,condition)) */
 
 
 /* sum the total amount of the persons */
-let resultArray = []
-let inputArray = [
-    {
-      "rep": "Prasanna",
-      "amount": 500,
-    },
-    {
-      "rep": "Jhon",
-      "amount": 300,
-    },
-    {
-      "rep": "Prasanna",
-      "amount": 600,
-    },
-    {
-      "rep": "Jack",
-      "amount": 800,
-    },
-    {
-      "rep": "Prasanna",
-      "amount": 300,
-    },
-    {
-      "rep": "Jack",
-      "amount": 100,
-    }
-  ]
+// let resultArray = []
+// let inputArray = [
+//     {
+//       "rep": "Prasanna",
+//       "amount": 500,
+//     },
+//     {
+//       "rep": "Jhon",
+//       "amount": 300,
+//     },
+//     {
+//       "rep": "Prasanna",
+//       "amount": 600,
+//     },
+//     {
+//       "rep": "Jack",
+//       "amount": 800,
+//     },
+//     {
+//       "rep": "Prasanna",
+//       "amount": 300,
+//     },
+//     {
+//       "rep": "Jack",
+//       "amount": 100,
+//     }
+//   ]
   
-  function t1(){
-  const resultVals ={}
-  for (let i = 0; i < inputArray.length; i++) {
-    const repName = inputArray[i].rep
-    if(resultVals[repName]==null || resultVals[repName]==undefined){
-        resultVals[repName]= {...inputArray[i]}
-    }else{
-        resultVals[repName].amount = inputArray[i].amount + resultVals[repName].amount
-    }
-  }
-  console.log("result val")
-  console.dir(resultVals)
+//   function t1(){
+//   const resultVals ={}
+//   for (let i = 0; i < inputArray.length; i++) {
+//     const repName = inputArray[i].rep
+//     if(resultVals[repName]==null || resultVals[repName]==undefined){
+//         resultVals[repName]= {...inputArray[i]}
+//     }else{
+//         resultVals[repName].amount = inputArray[i].amount + resultVals[repName].amount
+//     }
+//   }
+//   console.log("result val")
+//   console.dir(resultVals)
  
-  console.log("end of result val")
-  }
-  t1();
-  console.dir(inputArray)
+//   console.log("end of result val")
+//   }
+//   t1();
+//   console.dir(inputArray)
 
-for (let i = 0; i < inputArray.length; i++) { //0 //1 //2
-    console.log('=============')
-    if (resultArray.length === 0) {   // 0 //2
-        resultArray.push(inputArray[i]) //{'rep': 'Prasanna', 'amount': 500
-        console.log("Result", JSON.stringify(resultArray))
-        console.log("Current element ", JSON.stringify(inputArray[i]))
-        console.log('Result array inside if', resultArray.length, i)
-    }
-    else {
-        //check for the second object from input list with result list
-        //return object or return -1
-        let rep = findingRep(inputArray[i], resultArray)
-        if (rep === -1) {
-            resultArray.push(inputArray[i])
-        }
-        else {
-            rep.amount = rep.amount + inputArray[i].amount
-        }
+// for (let i = 0; i < inputArray.length; i++) { //0 //1 //2
+//     console.log('=============')
+//     if (resultArray.length === 0) {   // 0 //2
+//         resultArray.push(inputArray[i]) //{'rep': 'Prasanna', 'amount': 500
+//         console.log("Result", JSON.stringify(resultArray))
+//         console.log("Current element ", JSON.stringify(inputArray[i]))
+//         console.log('Result array inside if', resultArray.length, i)
+//     }
+//     else {
+//         //check for the second object from input list with result list
+//         //return object or return -1
+//         let rep = findingRep(inputArray[i], resultArray)
+//         if (rep === -1) {
+//             resultArray.push(inputArray[i])
+//         }
+//         else {
+//             rep.amount = rep.amount + inputArray[i].amount
+//         }
 
-    }
+//     }
 
 
-}
-console.log('Final result array', resultArray)
+// }
+// console.log('Final result array', resultArray)
 
-function findingRep(input,resultArray){
-    for(let i=0; i<resultArray.length;i++) {
-        if(input.rep === resultArray[i].rep){
-            return resultArray[i]
-        }
-    }
-    return -1
-}
+// function findingRep(input,resultArray){
+//     for(let i=0; i<resultArray.length;i++) {
+//         if(input.rep === resultArray[i].rep){
+//             return resultArray[i]
+//         }
+//     }
+//     return -1
+// }
 
 
 
@@ -588,9 +588,40 @@ function findingRep(input,resultArray){
 
 
 
-const o1 = {
-    "rep": {first:"firstname",lastname:"lastname"},
-    "amount": 500
+// const o1 = {
+//     "rep": {first:"firstname",lastname:"lastname"},
+//     "amount": 500
+// }
+// o1.rep =  {first:"anotherName",lastname:"anotherName"}
+
+
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+
+function createCounter(value) {
+  let initialCounter = value
+  let result = {
+      increment : inc = () => value = value + 1,
+      decrement : dec = () => value = value - 1,
+      reset : res = () => value = initialCounter
+  }
+  return result
 }
-o1.rep =  {first:"anotherName",lastname:"anotherName"}
+
+
+const r1 = createCounter(0)
+const callFuncs = ["increment","increment","decrement"]
+for(let i=0;i<callFuncs.length;i++){
+  const v1= r1[callFuncs[i]]()
+  console.log(v1)
+}
+
+
+let i=1;
+function p1(value){
+  return value+1
+}
+
 
